@@ -1,15 +1,18 @@
-﻿namespace HelloWorld;
+﻿using System.Globalization;
+
+namespace HelloWorld;
 
 class Program
 {
     static void Main()
     {
-        int numero = -7;
-        long numero2 = 7;
+        
+        DateOnly dia = new DateOnly(2023, 12, 1);
 
-        uint numero3 = 7; //inteiro sem sinal, apenas numeros positivos
+        string diaEmTexto = dia.ToString("dd/MMMM/yyyy", new CultureInfo("pt-BR"));
 
-        Console.WriteLine(numero);
-
+        DateTime dia1 = new DateTime(2023, 12, 1, 20, 07, 1);
+        DateTime hoje = DateTime.Now;
+        Console.WriteLine(hoje);
     }
 }
