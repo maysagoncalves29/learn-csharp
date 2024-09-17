@@ -15,8 +15,8 @@ class Program
         NivelDeDificuldade nivel = NivelDeDificuldade.Alto;
         int nivelInteiro = (int)nivel;
 
-        Console.WriteLine(nivelInteiro);
-        Console.WriteLine(nivel);
+       // Console.WriteLine(nivelInteiro);
+        //Console.WriteLine(nivel);
         /*
         DateOnly dia = new DateOnly(2023, 12, 1);
 
@@ -26,5 +26,15 @@ class Program
         DateTime hoje = DateTime.Now;
         Console.WriteLine(hoje);
         */
+        //Arrays
+        int[,] inteiros = new int[10, 10];
+
+        inteiros[0,0] = 1;
+        inteiros[0, 3] = 2;
+
+        Console.WriteLine(inteiros[0,0]);
+        Console.WriteLine(inteiros[0, 1]);
+        Console.WriteLine(inteiros[0, 2]);
+        Console.WriteLine(inteiros[0, 3]);
     }
 }
