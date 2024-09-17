@@ -4,37 +4,18 @@ namespace HelloWorld;
 
 class Program
 {
-    enum NivelDeDificuldade //são usados para definir um grupo de opções possíveis para uma variável. Também veremos que é possível atribuir valores numéricos específicos para cada opção do enum, desde que sejam positivos e não duplicados.
-    {
-        Baixo = 0,
-        Médio = 2,
-        Alto = 3 
-    }
+    //lista: apenas uma dimensão. não tem tamanho fixo.
     static void Main()
     {
-        NivelDeDificuldade nivel = NivelDeDificuldade.Alto;
-        int nivelInteiro = (int)nivel;
+       List<int> inteiros = new List<int>();
+        inteiros.Add(1);
+        Console.WriteLine(inteiros.Count);
 
-       // Console.WriteLine(nivelInteiro);
-        //Console.WriteLine(nivel);
-        /*
-        DateOnly dia = new DateOnly(2023, 12, 1);
+        List<object> objetos = new List<object>();
 
-        string diaEmTexto = dia.ToString("dd/MMMM/yyyy", new CultureInfo("pt-BR"));
-
-        DateTime dia1 = new DateTime(2023, 12, 1, 20, 07, 1);
-        DateTime hoje = DateTime.Now;
-        Console.WriteLine(hoje);
-        */
-        //Arrays
-        int[,] inteiros = new int[10, 10];
-
-        inteiros[0,0] = 1;
-        inteiros[0, 3] = 2;
-
-        Console.WriteLine(inteiros[0,0]);
-        Console.WriteLine(inteiros[0, 1]);
-        Console.WriteLine(inteiros[0, 2]);
-        Console.WriteLine(inteiros[0, 3]);
+        objetos.Add(1);
+        objetos.Add("String");
+        objetos.Add(true);
+        Console.WriteLine(objetos.Count);
     }
 }
