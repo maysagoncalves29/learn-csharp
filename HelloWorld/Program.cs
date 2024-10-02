@@ -1,21 +1,15 @@
-﻿using System.Globalization;
-using System.Reflection.PortableExecutable;
-
-namespace HelloWorld;
+﻿// Exercício 1:
 
 class Program
 {
-    //lista: apenas uma dimensão. não tem tamanho fixo.
-    static void Main()
+    static void Main(string[] args)
     {
-        int numero = 10;
-        var meuCarro = new Carro("civic")
-        {
-            Cor = Cor.Vermelho,
-            LancadoEm = new DateOnly(2020, 1, 1)
+        Console.WriteLine("Qual é o seu nome?");
+        string nome = Console.ReadLine();
+        Console.WriteLine($"Olá, {nome}! Seja bem vinda.");
 
-        };
-        meuCarro.NomeDoModelo();
-        Console.WriteLine("Oi");
+        Console.WriteLine("Qual é o seu sobrenome?");
+        string sobrenome = Console.ReadLine();
+        Console.WriteLine($"Seu nome é {nome} {sobrenome}.");
     }
 }
